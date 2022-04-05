@@ -28,8 +28,8 @@ async def start(event):
   await event.reply("**LegendTagger Bot**, \nDaha çox bilgi üçün **/help**'i yazın.",
                     buttons=(
                       [Button.url('Məni qrupa əlavə et', 'https://t.me/loungetaggerbot?startgroup=a'),
-                      [Button.url(' Support', 'https://t.me/legendsup'),
-                      [Button.url('Master', 'https://t.me/@aliyefh_sos'),
+                       Button.url(' Support', 'https://t.me/legendsup'),
+                       Button.url('Master', 'https://t.me/@aliyefh_sos')]
                     ),
                     link_preview=False
                    )
@@ -39,8 +39,8 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [Button.url('Məni qrupa əlavə et', 'https://t.me/loungetaggerbot?startgroup=a'),
-                      [Button.url(' Support', 'https://t.me/legendsup'),
-                      [Button.url('Master', 'https://t.me/@aliyefh_sos'),
+                       Button.url(' Support', 'https://t.me/legendsup'),
+                       Button.url('Master', 'https://t.me/@aliyefh_sos')]
                     ),
                     link_preview=False
                    )
