@@ -27,7 +27,7 @@ async def cancel(event):
 async def start(event):
   await event.reply("**LegendTagger Bot**, \nDaha çox bilgi üçün **/help**'i yazın.",
                     buttons=(
-                      [Button.url('Məni qrupa əlavə et', 'https://t.me/loungetaggerbot?startgroup=a'),
+                      [Button.url('Məni qrupa əlavə et', 'https://t.me/legendtaggerrobot?startgroup=a'),
                        Button.url(' Support', 'https://t.me/legendsup'),
                        Button.url('Master', 'https://t.me/@aliyefh_sos')]
                     ),
@@ -38,7 +38,7 @@ async def help(event):
   helptext = "**Legendtagger bot'un helper Menusu**\n\nəmr: /all \n`Örnək: /all Salam Chat!`  \nBu Əmr'i hər hansı bir mesaja reply ataraq yoxlaya bilərsiniz."
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni qrupa əlavə et', 'https://t.me/loungetaggerbot?startgroup=a'),
+                      [Button.url('Məni qrupa əlavə et', 'https://t.me/legendtaggerrobot?startgroup=a'),
                        Button.url(' Support', 'https://t.me/legendsup'),
                        Button.url('Master', 'https://t.me/@aliyefh_sos')]
                     ),
