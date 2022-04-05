@@ -29,7 +29,7 @@ async def start(event):
                     buttons=(
                       [Button.url('Məni qrupa əlavə et', 'https://t.me/loungetaggerbot?startgroup=a'),
                       [Button.url(' Support', 'https://t.me/legendsup'),
-                      [Button.url('Master', 'https://t.me/@aliyefh_sos')]
+                      [Button.url('Master', 'https://t.me/@aliyefh_sos'),
                     ),
                     link_preview=False
                    )
@@ -40,7 +40,7 @@ async def help(event):
                     buttons=(
                       [Button.url('Məni qrupa əlavə et', 'https://t.me/loungetaggerbot?startgroup=a'),
                       [Button.url(' Support', 'https://t.me/legendsup'),
-                      [Button.url('Master', 'https://t.me/@aliyefh_sos')]
+                      [Button.url('Master', 'https://t.me/@aliyefh_sos'),
                     ),
                     link_preview=False
                    )
