@@ -1,4 +1,4 @@
-import os, logging, asyncio
+import random, os, logging, asyncio
 from telethon import Button
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
@@ -15,7 +15,51 @@ api_hash = os.environ.get("API_HASH")
 bot_token = os.environ.get("TOKEN")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
+
 anlik_calisan = []
+
+tekli_calisan = []
+
+
+
+@client.on(events.NewMessage(pattern="^/start$"))
+async def start(event):
+  await event.reply("** Mən bütün userləri tag etməyə hazıram **\ \n əmrləri görmək üçün =======> /help yazın**",
+                    buttons=(
+                   
+		      [Button.url('Məni qrupa əlavə et, "https://t.me/@LegendTagger_bot?startgroup=a")],
+                       Button.url('Support🛠', 'https://t.me/LuciSup'),
+                       Button.url('Rəsmi Kanal', 'https://t.me/@legendupdates'),
+		       Button.url('Owner👨🏻‍💻', 'https://t.me/@quliyevv_17'),
+                       Button.url('innovating', 'https://t.me/aliyefh_sos')],
+                    ),
+                    link_preview=False
+                   )
+@client.on(events.NewMessage(pattern="^/help$"))
+async def help(event):
+  helptext = "** LegendTaggerBot əmr siyahısı**\n\n**/tag <səbəb> - 5-li tag edər**\n\n**/etag <səbəb> - Emoji ilə tag edər**\n\n**/tektag səbəb - userlərı Tək Tək tag edər**\n\n**/admins səbəb - adminləri tag edər**\n\n**/start - botu başldar**"
+  await event.reply(helptext,
+                    buttons=(
+                      [Button.url('Məni qrupa əlavə et, "https://t.me/@LegendTagger_bot?startgroup=a")],
+                       Button.url('Support🛠', 'https://t.me/LuciSup'),
+                       Button.url('Rəsmi Kanal', 'https://t.me/@legendupdates'),
+		       Button.url('Owner👨🏻‍💻', 'https://t.me/@quliyevv_17'),
+                       Button.url('innovating', 'https://t.me/aliyefh_sos')],
+                    ),
+                    link_preview=False
+                   )
+	
+@client.on(events.NewMessage(pattern="^/reklam$"))
+async def help(event):
+  helptext = "** @LegendTagger_bot ilə qrupunuzdakı userlərı daha asant tag edə bilərainiz\n daha ətraflı məlumat üçün @quliyevv_17 ! **"
+  await event.reply(helptext,
+                    buttons=(
+                      [Button.url('Məni qrupa əlavə et', 'https://t.me/@LegendTagger_bot?startgroup=a')],
+                    ),
+                    link_preview=False
+                   )
+	
+	
 
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
@@ -23,40 +67,20 @@ async def cancel(event):
   anlik_calisan.remove(event.chat_id)
 
 
-@client.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
-  await event.reply("**LegendTagger Bot**, \nDaha çox bilgi üçün **/help**'i yazın.",
-                    buttons=(
-                      [Button.url('Məni qrupa əlavə et', 'https://t.me/legendtaggerrobot?startgroup=a'),
-                       Button.url(' Support', 'https://t.me/legendsup'),
-                       Button.url('Master', 'https://t.me/@aliyefh_sos')]
-                    ),
-                    link_preview=False
-                   )
-@client.on(events.NewMessage(pattern="^/help$"))
-async def help(event):
-  helptext = "**Legendtagger bot'un helper Menusu**\n\nəmr: /all \n`Örnək: /all Salam Chat!`  \nBu Əmr'i hər hansı bir mesaja reply ataraq yoxlaya bilərsiniz."
-  await event.reply(helptext,
-                    buttons=(
-                      [Button.url('Məni qrupa əlavə et', 'https://t.me/legendtaggerrobot?startgroup=a'),
-                       Button.url(' Support', 'https://t.me/legendsup'),
-                       Button.url('Master', 'https://t.me/@aliyefh_sos')]
-                    ),
-                    link_preview=False
-                   )
+emoji = "🐵 🦁 🐯 🐱 🐶 🐺 🐻 🐨 🐼 🐹 🐭 🐰 🦊 🦝 🐮 🐷 🐽 🐗 🦓 🦄 🐴 🐸 🐲 🦎 🐉 🦖 🦕 🐢 🐊 🐍 🐁 🐀 🐇 🐈 🐩 🐕 🦮 🐕‍🦺 🐅 🐆 🐎 🐖 🐄 🐂 🐃 🐏 🐑 🐐 🦌 🦙 🦥 🦘 🐘 🦏 🦛 🦒 🐒 🦍 🦧 🐪 🐫 🐿️ 🦨 🦡 🦔 🦦 🦇 🐓 🐔 🐣 🐤 🐥 🐦 🦉 🦅 🦜 🕊️ 🦢 🦩 🦚 🦃 🦆 🐧🦈 🐬 🐋 🐳 🐟 🐠 🐡 🦐 🦞 🦀 🦑 🐙 🦪 🦂 🕷️ 🦋 🐞 🐝 🦟 🦗 🐜 🐌 🐚 🕸️ 🐛 🐾 😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 😍 🤩 🥳 🤗 🙃 🙂 ☺️ 😊 😏 😌 😉 🤭 😶 😐 😑 😔 😋 😛 😝 😜 🤪 🤔 🤨 🧐 🙄 😒 😤 😠 🤬 ☹️ 🙁 😕 😟 🥺 😳 😬 🤐 🤫 😰 😨 😧 😦 😮 😯 😲 😱 🤯 😢 😥 😓 😞 😖 😣 😩 😫 🤤 🥱 😴 😪 🌛 🌜 🌚 🌝 🌞 🤢 🤮 🤧 🤒 🍓 🍒 🍎 🍉 🍑 🍊 🥭 🍍 🍌 🌶 🍇 🥝 🍐 🍏 🍈 🍋 🍄 🥕 🍠 🧅 🌽 🥦 🥒 🥬 🥑 🥯 🥖 🥐 🍞 🥜 🌰 🥔 🧄 🍆 🧇 🥞 🥚 🧀 🥓 🥩 🍗 🍖 🥙 🌯 🌮 🍕 🍟 🥨 🥪 🌭 🍔 🧆 🥘 🍝 🥫 🥣 🥗 🍲 🍛 🍜 🍢 🥟 🍱 🍚 🥡 🍤 🍣 🦞 🦪 🍘 🍡 🥠 🥮 🍧 🍧 🍨".split(" ")
 
 
-@client.on(events.NewMessage(pattern="^/all ?(.*)"))
+@client.on(events.NewMessage(pattern="^/etag ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("__Buranın Bir qrup vəya kanal olduğundan əminsən ?__")
+    return await event.respond("**Bu  kanal v ə qrup üçündür!**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("__Yalnızca adminlər!__")
+    return await event.respond("**Bu əmr adminlər üçündür**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -65,21 +89,21 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("__XƏTA \nKöhnə mesajlarda tag edə bilmirəm!\n.........__")
+        return await event.respond("**old mesajları tag edə vilmirəm!**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Mənə bir mətn vəya söz ver !__")
+    return await event.respond("️Tag etmək üçün səbəb yaz ")
   else:
-    return await event.respond("__Mənə bir mətn vəya söz ver !__")
-    
+    return await event.respond("**Tag etməni başlatmaq üçün səbəb yaz !**")
+  
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("işləmə dayandırıldı.❌")
+        await event.respond("*tag etmə təyandırıldı!*")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -95,9 +119,9 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("işləmə dayandırıldı.❌")
+        await event.respond("Modul dəyandırıldı.\n\n**Buda sizin reklamınız ola bilər @LegendReklam**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -106,5 +130,161 @@ async def mentionall(event):
         usrtxt = ""
 
 
-print(">> Owner @quliyevv_17\nMaster BGMALIY⋈\nBot online <<")
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global anlik_calisan
+  anlik_calisan.remove(event.chat_id)
+
+
+@client.on(events.NewMessage(pattern="^/tag ?(.*)"))
+async def mentionall(event):
+  global anlik_calisan
+  if event.is_private:
+    return await event.respond("Bu əm gruplar və kanallar üçündür❗️**")
+  
+  admins = []
+  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
+    admins.append(admin.id)
+  if not event.sender_id in admins:
+    return await event.respond("**Bu əmri sadəcə adminlər işlədə bilir️**")
+  
+  if event.pattern_match.group(1):
+    mode = "text_on_cmd"
+    msg = event.pattern_match.group(1)
+  elif event.reply_to_msg_id:
+    mode = "text_on_reply"
+    msg = event.reply_to_msg_id
+    if msg == None:
+        return await event.respond("əvvəlki  Mesajlara Cavab Verməyin")
+  elif event.pattern_match.group(1) and event.reply_to_msg_id:
+    return await event.respond("Başlatmaq üçün səbeb yox❗️")
+  else:
+    return await event.respond("Işləməni başlamaq üçün səbəb yoxdur")
+  
+  if mode == "text_on_cmd":
+    anlik_calisan.append(event.chat_id)
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+      usrnum += 1
+      usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      if event.chat_id not in anlik_calisan:
+        await event.respond("Modul dəyandırıldı.\n\n**Buda sizin reklamınız ola bilər @LegendReklam**)
+        return
+      if usrnum == 5:
+        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+        
+  
+  if mode == "text_on_reply":
+    anlik_calisan.append(event.chat_id)
+ 
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+      usrnum += 1
+      usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      if event.chat_id not in anlik_calisan:
+        await event.respond("işləmə sonıandırıldı!")
+        return
+      if usrnum == 5:
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global anlik_calisan
+  anlik_calisan.remove(event.chat_id)
+	
+
+@client.on(events.NewMessage(pattern="^/təktag ?(.*)"))
+async def mentionall(event):
+  global tekli_calisan
+  if event.is_private:
+    return await event.respond("**B️u əmr qrup və ya kanal üçündür **")
+  
+  admins = []
+  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
+    admins.append(admin.id)
+  if not event.sender_id in admins:
+    return await event.respond("**Bu əmr adminlər üçündür!**")
+  
+  if event.pattern_match.group(1):
+    mode = "text_on_cmd"
+    msg = event.pattern_match.group(1)
+  elif event.reply_to_msg_id:
+    mode = "text_on_reply"
+    msg = event.reply_to_msg_id
+    if msg == None:
+        return await event.respond("**öncəki mesajı etiketleye bilmirəm*")
+  elif event.pattern_match.group(1) and event.reply_to_msg_id:
+    return await event.respond("Başlamaq için Sebəb Yazın❗️")
+  else:
+    return await event.respond("**Işlənmə başlamağım için sebəb yazın..**")
+  
+  if mode == "text_on_cmd":
+    tekli_calisan.append(event.chat_id)
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+      usrnum += 1
+      usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
+      if event.chat_id not in tekli_calisan:
+        await event.respond("Modul dəyandırıldı.\n\n**Buda sizin reklamınız ola bilər @LegendReklam**")
+        return
+      if usrnum == 1:
+        await client.send_message(event.chat_id, f"{usrtxt} {msg}")
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+        
+  
+  if mode == "text_on_reply":
+    tekli_calisan.append(event.chat_id)
+ 
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+      usrnum += 1
+      usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      if event.chat_id not in tekli_calisan:
+        await event.respond("Modul dəyandırıldı.\n\n**Buda sizin reklamınız ola bilər @LegendReklam**")
+        return
+      if usrnum == 1:
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global tekli_calisan
+  tekli_calisan.remove(event.chat_id)
+	
+
+
+@client.on(events.NewMessage(pattern="^/admins ?(.*)"))
+async def mentionall(tagadmin):
+
+	if tagadmin.pattern_match.group(1):
+		seasons = tagadmin.pattern_match.group(1)
+	else:
+		seasons = ""
+
+	chat = await tagadmin.get_input_chat()
+	a_=0
+	await tagadmin.delete()
+	async for i in client.iter_participants(chat, filter=cp):
+		if a_ == 500:
+			break
+		a_+=5
+		await tagadmin.client.send_message(tagadmin.chat_id, "**[{}](tg://user?id={}) {}**".format(i.first_name, i.id, seasons))
+		sleep(0.5)
+
+
+print("==> LegendTaggerBot online..!\n==> Owner @quliyevv_17\n==> Editor @aliyefh_sos")
 client.run_until_disconnected()
