@@ -28,7 +28,7 @@ async def start(event):
                     buttons=(
                    
 		      [Button.url('Məni qrupa əlavə et', "https://t.me/@LegendTagger_bot?startgroup=a")],
-                      [Button.url('Support🛠', 'https://t.me/LuciSup'),
+                      [Button.url('Support🛠', 'https://t.me/LegendSup')],
                       [Button.url('Rəsmi Kanal', 'https://t.me/@legendupdates')],
 		      [Button.url('Owner👨🏻‍💻', 'https://t.me/@quliyevv_17')],
                       [Button.url('innovating', 'https://t.me/aliyefh_sos')],
@@ -41,7 +41,7 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [Button.url('Məni qrupa əlavə et', "https://t.me/@LegendTagger_bot?startgroup=a")],
-                      [Button.url('Support🛠', 'https://t.me/LuciSup'),
+                      [Button.url('Support🛠', 'https://t.me/LegendSup')],
                       [Button.url('Rəsmi Kanal', 'https://t.me/@legendupdates')],
 		      [Button.url('Owner👨🏻‍💻', 'https://t.me/@quliyevv_17')],
                       [Button.url('innovating', 'https://t.me/aliyefh_sos')],
