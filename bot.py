@@ -169,7 +169,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Modul dəyandırıldı.\n\n**Buda sizin reklamınız ola bilər @LegendReklam**)
+        await event.respond("Modul dəyandırıldı.\n\n**Buda sizin reklamınız ola bilər @LegendReklam**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
