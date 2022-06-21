@@ -27,24 +27,24 @@ async def start(event):
   await event.reply("** Mən bütün userləri tag etməyə hazıram **\ \n əmrləri görmək üçün =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Məni qrupa əlavə et', "https://t.me/@LegendTagger_bot?startgroup=a")],
+		      [Button.url('Məni qrupa əlavə et', "https://t.me/LegendTagger_bot?startgroup=a")],
                       [Button.url('Support🛠', 'https://t.me/LegendSup')],
-                      [Button.url('Rəsmi Kanal', 'https://t.me/@legendupdates')],
-		      [Button.url('Owner👨🏻‍💻', 'https://t.me/@quliyevv_17')],
-                      [Button.url('innovating', 'https://t.me/aliyefh_sos')],
+                      [Button.url('Rəsmi Kanal', 'https://t.me/IegendMMC')],
+		      [Button.url('Owner👨🏻‍💻', 'https://t.me/quliyevv_17')],
+                      [Button.url('innovating', 'https://t.me/aliyefhsos')],
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "** LegendTaggerBot əmr siyahısı**\n\n**/tag <səbəb> - 5-li tag edər**\n\n**/etag <səbəb> - Emoji ilə tag edər**\n\n**/tektag səbəb - userlərı Tək Tək tag edər**\n\n**/admins səbəb - adminləri tag edər**\n\n**/start - botu başldar**"
+  helptext = "** LegendTaggerBot əmr siyahısı**\n\n**/tag <səbəb> - 5-li tag edər**\n\n**/etag <səbəb> - Emoji ilə tag edər**\n\n**/tektag səbəb - userlərı Tək Tək tag edər**\n\n**/admins səbəb - adminləri tag edər**\n\n**/start - botu başladar**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni qrupa əlavə et', "https://t.me/@LegendTagger_bot?startgroup=a")],
+                      [Button.url('Məni qrupa əlavə et', "https://t.me/LegendTagger_bot?startgroup=a")],
                       [Button.url('Support🛠', 'https://t.me/LegendSup')],
-                      [Button.url('Rəsmi Kanal', 'https://t.me/@legendupdates')],
-		      [Button.url('Owner👨🏻‍💻', 'https://t.me/@quliyevv_17')],
-                      [Button.url('innovating', 'https://t.me/aliyefh_sos')],
+                      [Button.url('Rəsmi Kanal', 'https://t.me/IegendMMC')],
+		      [Button.url('Owner👨🏻‍💻', 'https://t.me/quliyevv_17')],
+                      [Button.url('innovating', 'https://t.me/aliyefhsos')],
                     ),
                     link_preview=False
                    )
@@ -54,7 +54,7 @@ async def help(event):
   helptext = "** @LegendTagger_bot ilə qrupunuzdakı userlərı daha asant tag edə bilərainiz\n daha ətraflı məlumat üçün @quliyevv_17 ! **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni qrupa əlavə et', 'https://t.me/@LegendTagger_bot?startgroup=a')],
+                      [Button.url('Məni qrupa əlavə et', 'https://t.me/LegendTagger_bot?startgroup=a')],
                     ),
                     link_preview=False
                    )
