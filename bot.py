@@ -169,7 +169,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @LegendReklam**")
+        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @IegendMMC**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -201,7 +201,7 @@ async def cancel(event):
   anlik_calisan.remove(event.chat_id)
 	
 
-@client.on(events.NewMessage(pattern="^/təktag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/tektag ?(.*)"))
 async def mentionall(event):
   global tekli_calisan
   if event.is_private:
@@ -220,11 +220,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**öncəki mesajı etiketleye bilmirəm*")
+        return await event.respond("**öncəki mesajı yanıtlaya bilmirəm*")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
     return await event.respond("Başlamaq için Səbəb Yazın❗️")
   else:
-    return await event.respond("**Işlənmə başlamağım için səbəb yazın..**")
+    return await event.respond("**Tağa başlamağım için səbəb yazın..**")
   
   if mode == "text_on_cmd":
     tekli_calisan.append(event.chat_id)
@@ -234,7 +234,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Modul dəyandırıldı.\n\n**Buda sizin reklamınız ola bilər @LegendReklam**")
+        await event.respond("Modul dəyandırıldı.\n\n**Buda sizin reklamınız ola bilər @IegendMMC**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
@@ -252,7 +252,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Modul dəyandırıldı.\n\n**Burada sizin reklamınız ola bilər @LegendReklam**")
+        await event.respond("Modul dəyandırıldı.\n\n**Burada sizin reklamınız ola bilər @IegendMMC**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
