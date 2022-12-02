@@ -1,17 +1,17 @@
 {
-  "name": "Legend Tagger Bot",
+  "name": "Strong Tagger Bot",
   "logo":"x",
   "description": "gaga özüdü.",
   "env": {
-    "TOKEN": {
+    "TOKEN": 5734735992:AAFY4diqoLDdyMQ_wLCm-SnqhmJLL8H6Yrg {
       "description": "bot token girin.",
       "value": ""
     },
-    "APP_ID": {
+    "APP_ID": 16421462 {
       "description": "@otomytelegrambot dan api hash api id alınız.",
       "value": ""
     },
-    "API_HASH": {
+    "API_HASH": cc464d82989c88a392f59133591895a2 {
       "description": "@otomytelegrambot dan api hash api id alınız.",
       "value": ""
     }
