@@ -1,6 +1,3 @@
-# Oğurlayan mənə ata desin
-# @SmokAndMe
-
 
 import asyncio
 import random
