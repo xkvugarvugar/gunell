@@ -3,7 +3,7 @@
   "logo":"x",
   "description": "gaga özüdü.",
   "env": {
-    "TOKEN": 5734735992:AAFY4diqoLDdyMQ_wLCm-SnqhmJLL8H6Yrg {
+    "TOKEN": "5734735992:AAFY4diqoLDdyMQ_wLCm-SnqhmJLL8H6Yrg" {
       "description": "bot token girin.",
       "value": ""
     },
