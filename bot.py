@@ -24,14 +24,14 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("** Mən bütün userləri tag etməyə hazıram **\ \n əmrləri görmək üçün =======> /help yazın**",
+  await event.reply("**Salam Mənim Adım [Ədalət Tagger Bot](http://t.me/edaletsup)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.**\ \n əmrləri görmək üçün =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/StrongTaggerBot?startgroup=a")],
-                      [Button.url('Support 🛠', 'https://t.me/StrongBotsChat')],
-                      [Button.url('Rəsmi Kanal 🐉', 'https://t.me/Strong_Bots')],
-		      [Button.url('Owner 👨🏻‍💻', 'https://t.me/ozudugagas')],
-                      [Button.url('innovating ⚡️', 'https://t.me/ozudugagas')],
+		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/edalettagbot?startgroup=a")],
+                      [Button.url('Support 🛠', 'https://t.me/EdaletSup'),
+                       Button.url('Rəsmi Kanal 🎴', 'https://t.me/edaletproject')],
+		      [Button.url('Sahib 👨🏻‍💻', 'https://t.me/edalet_22'),
+                       Button.url('Creator⚡️', 'https://t.me/edalet_22')],
                     ),
                     link_preview=False
                    )
@@ -40,21 +40,22 @@ async def help(event):
   helptext = "** Legend ⚡️ Tagger əmr siyahısı**\n\n**/tag <səbəb> - 5-li tag edər**\n\n**/etag <səbəb> - Emoji ilə tag edər**\n\n**/tektag səbəb - userlərı Tək Tək tag edər**\n\n**/admins səbəb - adminləri tag edər**\n\n**/start - botu başladar**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni qrupa əlavə et', "https://t.me/StrongTaggerBot?startgroup=a")],
-                      [Button.url('Support🛠', 'https://t.me/StrongBotsChat')],
-                      [Button.url('Rəsmi Kanal', 'https://t.me/StrongBots')],
-		      [Button.url('Owner 👨🏻‍💻', 'https://t.me/ozudugagas')],
-                      [Button.url('innovating ⚡️', 'https://t.me/ozudugagas')],
+			    
+		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/edalettagbot?startgroup=a")],
+                      [Button.url('Support 🛠', 'https://t.me/EdaletSup'),
+                       Button.url('Rəsmi Kanal 🎴', 'https://t.me/edaletproject')],
+		      [Button.url('Sahib 👨🏻‍💻', 'https://t.me/edalet_22'),
+                       Button.url('Creator⚡️', 'https://t.me/edalet_22')]
                     ),
                     link_preview=False
                    )
 	
 @client.on(events.NewMessage(pattern="^/reklam"))
 async def help(event):
-  helptext = "** @StrongTaggerBot ilə qrupunuzdakı userləri daha asan tag edə bilərsiniz\n daha ətraflı məlumat üçün @ozudugagas ! **"
+  helptext = "** Relam və yaxud bot düzəltdirmək üçün @edalet_22 ! **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni qrupa əlavə et ➕', 'https://t.me/StrongTaggerBot?startgroup=a')],
+                      [Button.url('Məni qrupa əlavə et ➕', 'https://t.me/edalettagbot?startgroup=a')],
                     ),
                     link_preview=False
                    )
@@ -121,7 +122,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @Strong_Bots**")
+        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @edalet_22**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -169,7 +170,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @StrongBots**")
+        await event.respond("Modul dayandırıldı.\n\n**Burada sizin reklamınız ola bilər @edalet_22**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -234,7 +235,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"**👤 - [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Modul dayandırıldı.\n\n**Buda sizin reklamınız ola bilər @StrongBots**")
+        await event.respond("Modul dayandırıldı.\n\n**Buda sizin reklamınız ola bilər @edalet_22**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
@@ -252,7 +253,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
-        await event.respond("Modul dəyandırıldı.\n\n**Burada sizin reklamınız ola bilər @StrongBots**")
+        await event.respond("Modul dəyandırıldı.\n\n**Burada sizin reklamınız ola bilər @edalet_22**")
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -286,5 +287,5 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
-print("==> StrongTaggerBot online..!\n==> Owner @ozudugagas\n==> Editor @ozudugagas")
+print("==> EdaletTaggerBot online..!\n==> Owner @edalet_22\n==> Editor @edalet_22")
 client.run_until_disconnected()
