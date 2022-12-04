@@ -11,7 +11,7 @@
       "description": "@otomytelegrambot dan api hash api id alınız.",
       "value": ""
     },
-    "API_HASH": cc464d82989c88a392f59133591895a2 {
+    "API_HASH": "cc464d82989c88a392f59133591895a2" {
       "description": "@otomytelegrambot dan api hash api id alınız.",
       "value": ""
     }
@@ -19,4 +19,4 @@
   "buildpacks": [{
     "url": "https://github.com/heroku/heroku-buildpack-python.git"
   }]
-}
+},
