@@ -24,7 +24,7 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**Salam Mənim Adım [Gϋиєℓ](http://t.me/edaletsup)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.**\ \n Əmrləri görmək üçün =======> /help yazın**",
+  await event.reply("**Salam Mənim Adım [Gϋиєℓ](http://t.me/edaletsup).\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.**\ \n Əmrləri görmək üçün =======> /help yazın**",
                     buttons=(
                    
 		      [Button.url('Məni qrupa əlavə et ➕', "https://t.me/GUNELTAG_BOT?startgroup=a")],
