@@ -59,11 +59,11 @@ app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
 ############## DEĞİŞKENLER ##############
 
 DATABASE_URL = "mongodb+srv://EdaletBalaev:Edalet2020@cluster0.fxrv624.mongodb.net/?retryWrites=true&w=majority"
-BOT_USERNAME = "GUNELTAG_BOT"
-LOG_CHANNEL = -1001815166089
-GROUP_SUPPORT = "Edaletsup"
+BOT_USERNAME = "N1TaggerBOT"
+LOG_CHANNEL = -1001566763718
+GROUP_SUPPORT = "sohbet_no1"
 GONDERME_TURU = False
-OWNER_ID = [5540993505]
+OWNER_ID = [5809546648]
 LANGAUGE = "AZ"
 
 
@@ -80,7 +80,7 @@ async def hg(bot: Client, msg: Message):
 #-------------------------------------------------------------OWNERS SALAMLAMA MSJ---------------------------------------------------------------------------------------#
       
 #	elif str(new_user.id) == str(Config.OWNER_ID):
-#           await msg.reply('🤖 [Ədalət 𝗧𝗮𝗴𝗴𝗲𝗿](https://t.me/EdaletSup)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
+#           await msg.reply('🤖 [Riyad 𝗧𝗮𝗴𝗴𝗲𝗿](https://t.me/N1TaggerBot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
 
 	
 	
@@ -452,7 +452,7 @@ class LAN(object):
         BROADCAST_STARTED = "```📤 BroadCast başlatıldı! Bittiği zaman mesaj alacaksınız!"
         BROADCAST_STOPPED = "✅ ```Broadcast başarıyla tamamlandı.``` \n\n**Şu Kadar Sürede Tamamlandı:** `{}` \n\n**Kayıtlı Toplam Kullanıcı:** `{}` \n\n**Toplam Gönderme Denemesi:** `{}` \n\n**Başarıyla Gönderilen:** `{}` \n\n**Toplam Hata:** `{}`"
         STATS_STARTED = "{} **Lütfen bekleyiniz verileri getiriyorum!**"
-        STATS = """**@{} Verileri**\n\n**Kullanıcılar;**\n» **Toplam Sohbetler:** `{}`\n» **Toplam Gruplar: `{}`\n» **Toplam PM's: `{}`\n\n**Disk Kullanımı;**\n» **Disk Alanı:** `{}`\n» **Kullanılan:** `{}({}%)`\n» **Boşta:** `{}`\n\n**🎛 En Yüksek Kullanım Değerleri;**\n» **CPU:** `{}%`\n» **RAM:** `{}%`\n**Sürümler;**\n» **Pyrogram:** {}\n\n\n__• By @BasicBots__"""
+        STATS = """**@{} Verileri**\n\n**Kullanıcılar;**\n» **Toplam Sohbetler:** `{}`\n» **Toplam Gruplar: `{}`\n» **Toplam PM's: `{}`\n\n**Disk Kullanımı;**\n» **Disk Alanı:** `{}`\n» **Kullanılan:** `{}({}%)`\n» **Boşta:** `{}`\n\n**🎛 En Yüksek Kullanım Değerleri;**\n» **CPU:** `{}%`\n» **RAM:** `{}%`\n**Sürümler;**\n» **Pyrogram:** {}\n\n\n__• By @RiyaddBlogg__"""
         BAN_REASON = "Bu sebep yasaklandığınız için @{} tarafından otomatik olarak oluşturulmuştur"
         NEED_USER = "**Lütfen Kullanıcı kimliği verin.**"
         BANNED_GROUP = "🚷 **Yasaklandı!\n\nTarafından:** {}\n**Grup ID:** `{}` \n**Süre:** `{}` \n**Sebep:** `{}`"
@@ -563,7 +563,7 @@ async def handler(event):
     # Kimsə "Salam" və başqa bir şey deyəndə cavab verin
     if str(event.sender_id) not in SUDO_USERS:
         return await event.reply("__Sən mənə sahib deyilsən!__")
-    await event.reply('**Qoz kimiyəm narahat olma** \n https://t.me/EdaletSup \n\n┈┈┈┈┈╱▔▔▔▔▔╲┈╭━━\n┈┏╮╭┓▏┈┈┈╭╮┈▏┃╭╮┈\n┈╰╮╭╯▏┈┈┣━━━▏╰┳━\n┈┈┃╰╱┈┈┈╰━━━▏━╯┈\n┈┈┈╲▂▂▂▂▂▂▂╱┈┈┈┈',
+    await event.reply('**Qoz kimiyəm narahat olma** \n https://t.me/RiyaddBlogg \n\n┈┈┈┈┈╱▔▔▔▔▔╲┈╭━━\n┈┏╮╭┓▏┈┈┈╭╮┈▏┃╭╮┈\n┈╰╮╭╯▏┈┈┣━━━▏╰┳━\n┈┈┃╰╱┈┈┈╰━━━▏━╯┈\n┈┈┈╲▂▂▂▂▂▂▂╱┈┈┈┈',
 		     buttons=(
 	             [Button.url('Sahibi','https://t.me/edalet_22'),
 	             Button.url('Group','https://t.me/EdaletSup')],
